@@ -1,0 +1,150 @@
+{
+ "schema": 1,
+ "generated_at": "2026-11-08",
+ "rules": {
+  "min_gap_days": 1.0,
+  "gate_min_reviews": 300,
+  "gate_confidence": 0.95,
+  "gate_calibration_tolerance": 0.01,
+  "fit_min_reviews": 512,
+  "min_week_reviews": 20
+ },
+ "totals": {
+  "usable_reviews": 67,
+  "first_week": "2026-10-19"
+ },
+ "models": [
+  {
+   "version": "fsrs6-default",
+   "kind": "fsrs",
+   "role": "champion",
+   "registered": "2026-10-20",
+   "trained_on_reviews": null
+  },
+  {
+   "version": "lightgbm-public-v1",
+   "kind": "lightgbm",
+   "role": "challenger",
+   "registered": "2026-10-20",
+   "trained_on_reviews": 1342112
+  }
+ ],
+ "weeks": [
+  {
+   "week": "2026-10-19",
+   "usable_reviews": 28,
+   "recall_rate": 0.9286,
+   "champion_predicted": 0.8594,
+   "models": {
+    "fsrs6-default": {
+     "log_loss": 0.2757,
+     "rmse_bins": 0.2202,
+     "n": 28
+    },
+    "lightgbm-public-v1": {
+     "log_loss": 0.2415,
+     "rmse_bins": 0.1015,
+     "n": 28
+    }
+   }
+  },
+  {
+   "week": "2026-11-02",
+   "usable_reviews": 39,
+   "recall_rate": 0.8205,
+   "champion_predicted": 0.6489,
+   "models": {
+    "fsrs6-default": {
+     "log_loss": 0.5027,
+     "rmse_bins": 0.2864,
+     "n": 39
+    },
+    "lightgbm-public-v1": {
+     "log_loss": 0.4382,
+     "rmse_bins": 0.146,
+     "n": 39
+    }
+   }
+  }
+ ],
+ "calibration": {
+  "fsrs6-default": [
+   {
+    "predicted": 0.354,
+    "actual": 0.667,
+    "n": 3
+   },
+   {
+    "predicted": 0.495,
+    "actual": 0.0,
+    "n": 1
+   },
+   {
+    "predicted": 0.532,
+    "actual": 0.75,
+    "n": 12
+   },
+   {
+    "predicted": 0.654,
+    "actual": 0.8,
+    "n": 5
+   },
+   {
+    "predicted": 0.769,
+    "actual": 0.923,
+    "n": 26
+   },
+   {
+    "predicted": 0.887,
+    "actual": 0.0,
+    "n": 1
+   },
+   {
+    "predicted": 0.909,
+    "actual": 1.0,
+    "n": 19
+   }
+  ],
+  "lightgbm-public-v1": [
+   {
+    "predicted": 0.669,
+    "actual": 0.8,
+    "n": 5
+   },
+   {
+    "predicted": 0.765,
+    "actual": 0.667,
+    "n": 12
+   },
+   {
+    "predicted": 0.863,
+    "actual": 0.833,
+    "n": 12
+   },
+   {
+    "predicted": 0.938,
+    "actual": 0.947,
+    "n": 38
+   }
+  ]
+ },
+ "gate": [
+  {
+   "challenger": "lightgbm-public-v1",
+   "kind": "lightgbm",
+   "promote": false,
+   "n": 67,
+   "champion_log_loss": 0.4078,
+   "challenger_log_loss": 0.356,
+   "champion_rmse_bins": 0.2397,
+   "challenger_rmse_bins": 0.0949,
+   "p_better": 0.879,
+   "reasons": [
+    "lightgbm models cannot schedule",
+    "67 shared reviews < 300",
+    "better log loss in 88% of resamples < 95%"
+   ]
+  }
+ ],
+ "promotions": []
+}
