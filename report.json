@@ -10,7 +10,7 @@
   "min_week_reviews": 20
  },
  "totals": {
-  "usable_reviews": 67,
+  "usable_reviews": 71,
   "first_week": "2026-10-19"
  },
  "models": [
@@ -50,19 +50,19 @@
   },
   {
    "week": "2026-11-02",
-   "usable_reviews": 39,
-   "recall_rate": 0.8205,
-   "champion_predicted": 0.6489,
+   "usable_reviews": 43,
+   "recall_rate": 0.7674,
+   "champion_predicted": 0.6433,
    "models": {
     "fsrs6-default": {
-     "log_loss": 0.5027,
-     "rmse_bins": 0.2864,
-     "n": 39
+     "log_loss": 0.5186,
+     "rmse_bins": 0.256,
+     "n": 43
     },
     "lightgbm-public-v1": {
-     "log_loss": 0.4382,
-     "rmse_bins": 0.146,
-     "n": 39
+     "log_loss": 0.5093,
+     "rmse_bins": 0.1486,
+     "n": 43
     }
    }
   }
@@ -80,9 +80,9 @@
     "n": 1
    },
    {
-    "predicted": 0.532,
-    "actual": 0.75,
-    "n": 12
+    "predicted": 0.534,
+    "actual": 0.6,
+    "n": 15
    },
    {
     "predicted": 0.654,
@@ -90,9 +90,9 @@
     "n": 5
    },
    {
-    "predicted": 0.769,
-    "actual": 0.923,
-    "n": 26
+    "predicted": 0.767,
+    "actual": 0.926,
+    "n": 27
    },
    {
     "predicted": 0.887,
@@ -112,19 +112,19 @@
     "n": 5
    },
    {
-    "predicted": 0.765,
-    "actual": 0.667,
-    "n": 12
+    "predicted": 0.76,
+    "actual": 0.571,
+    "n": 14
    },
    {
-    "predicted": 0.863,
-    "actual": 0.833,
-    "n": 12
+    "predicted": 0.864,
+    "actual": 0.769,
+    "n": 13
    },
    {
-    "predicted": 0.938,
-    "actual": 0.947,
-    "n": 38
+    "predicted": 0.937,
+    "actual": 0.949,
+    "n": 39
    }
   ]
  },
@@ -133,16 +133,16 @@
    "challenger": "lightgbm-public-v1",
    "kind": "lightgbm",
    "promote": false,
-   "n": 67,
-   "champion_log_loss": 0.4078,
-   "challenger_log_loss": 0.356,
-   "champion_rmse_bins": 0.2397,
-   "challenger_rmse_bins": 0.0949,
-   "p_better": 0.879,
+   "n": 71,
+   "champion_log_loss": 0.4228,
+   "challenger_log_loss": 0.4037,
+   "champion_rmse_bins": 0.221,
+   "challenger_rmse_bins": 0.1114,
+   "p_better": 0.665,
    "reasons": [
     "lightgbm models cannot schedule",
-    "67 shared reviews < 300",
-    "better log loss in 88% of resamples < 95%"
+    "71 shared reviews < 300",
+    "better log loss in 66% of resamples < 95%"
    ]
   }
  ],
