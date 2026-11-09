@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-08",
+ "generated_at": "2026-11-09",
  "rules": {
   "min_gap_days": 1.0,
   "gate_min_reviews": 300,
@@ -10,7 +10,7 @@
   "min_week_reviews": 20
  },
  "totals": {
-  "usable_reviews": 71,
+  "usable_reviews": 114,
   "first_week": "2026-10-19"
  },
  "models": [
@@ -50,19 +50,37 @@
   },
   {
    "week": "2026-11-02",
-   "usable_reviews": 43,
-   "recall_rate": 0.7674,
-   "champion_predicted": 0.6433,
+   "usable_reviews": 58,
+   "recall_rate": 0.7931,
+   "champion_predicted": 0.6804,
    "models": {
     "fsrs6-default": {
-     "log_loss": 0.5186,
-     "rmse_bins": 0.256,
-     "n": 43
+     "log_loss": 0.4868,
+     "rmse_bins": 0.2155,
+     "n": 58
     },
     "lightgbm-public-v1": {
-     "log_loss": 0.5093,
-     "rmse_bins": 0.1486,
-     "n": 43
+     "log_loss": 0.4935,
+     "rmse_bins": 0.1466,
+     "n": 58
+    }
+   }
+  },
+  {
+   "week": "2026-11-09",
+   "usable_reviews": 28,
+   "recall_rate": 0.9286,
+   "champion_predicted": 0.7711,
+   "models": {
+    "fsrs6-default": {
+     "log_loss": 0.3582,
+     "rmse_bins": 0.2093,
+     "n": 28
+    },
+    "lightgbm-public-v1": {
+     "log_loss": 0.2623,
+     "rmse_bins": 0.1883,
+     "n": 28
     }
    }
   }
@@ -70,9 +88,9 @@
  "calibration": {
   "fsrs6-default": [
    {
-    "predicted": 0.354,
-    "actual": 0.667,
-    "n": 3
+    "predicted": 0.353,
+    "actual": 0.8,
+    "n": 5
    },
    {
     "predicted": 0.495,
@@ -80,24 +98,24 @@
     "n": 1
    },
    {
-    "predicted": 0.534,
-    "actual": 0.6,
-    "n": 15
+    "predicted": 0.535,
+    "actual": 0.632,
+    "n": 19
    },
    {
-    "predicted": 0.654,
-    "actual": 0.8,
-    "n": 5
+    "predicted": 0.643,
+    "actual": 0.75,
+    "n": 8
    },
    {
-    "predicted": 0.767,
-    "actual": 0.926,
-    "n": 27
+    "predicted": 0.768,
+    "actual": 0.941,
+    "n": 34
    },
    {
-    "predicted": 0.887,
-    "actual": 0.0,
-    "n": 1
+    "predicted": 0.863,
+    "actual": 0.893,
+    "n": 28
    },
    {
     "predicted": 0.909,
@@ -107,24 +125,24 @@
   ],
   "lightgbm-public-v1": [
    {
-    "predicted": 0.669,
+    "predicted": 0.662,
+    "actual": 0.778,
+    "n": 9
+   },
+   {
+    "predicted": 0.757,
+    "actual": 0.684,
+    "n": 19
+   },
+   {
+    "predicted": 0.851,
     "actual": 0.8,
-    "n": 5
+    "n": 20
    },
    {
-    "predicted": 0.76,
-    "actual": 0.571,
-    "n": 14
-   },
-   {
-    "predicted": 0.864,
-    "actual": 0.769,
-    "n": 13
-   },
-   {
-    "predicted": 0.937,
-    "actual": 0.949,
-    "n": 39
+    "predicted": 0.94,
+    "actual": 0.939,
+    "n": 66
    }
   ]
  },
@@ -133,16 +151,16 @@
    "challenger": "lightgbm-public-v1",
    "kind": "lightgbm",
    "promote": false,
-   "n": 71,
-   "champion_log_loss": 0.4228,
-   "challenger_log_loss": 0.4037,
-   "champion_rmse_bins": 0.221,
-   "challenger_rmse_bins": 0.1114,
-   "p_better": 0.665,
+   "n": 114,
+   "champion_log_loss": 0.4034,
+   "challenger_log_loss": 0.3748,
+   "champion_rmse_bins": 0.173,
+   "challenger_rmse_bins": 0.1012,
+   "p_better": 0.805,
    "reasons": [
     "lightgbm models cannot schedule",
-    "71 shared reviews < 300",
-    "better log loss in 66% of resamples < 95%"
+    "114 shared reviews < 300",
+    "better log loss in 81% of resamples < 95%"
    ]
   }
  ],
