@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-09",
+ "generated_at": "2026-11-10",
  "rules": {
   "min_gap_days": 1.0,
   "gate_min_reviews": 300,
@@ -10,7 +10,7 @@
   "min_week_reviews": 20
  },
  "totals": {
-  "usable_reviews": 114,
+  "usable_reviews": 115,
   "first_week": "2026-10-19"
  },
  "models": [
@@ -68,19 +68,19 @@
   },
   {
    "week": "2026-11-09",
-   "usable_reviews": 28,
-   "recall_rate": 0.9286,
-   "champion_predicted": 0.7711,
+   "usable_reviews": 29,
+   "recall_rate": 0.931,
+   "champion_predicted": 0.7675,
    "models": {
     "fsrs6-default": {
-     "log_loss": 0.3582,
-     "rmse_bins": 0.2093,
-     "n": 28
+     "log_loss": 0.3599,
+     "rmse_bins": 0.2147,
+     "n": 29
     },
     "lightgbm-public-v1": {
-     "log_loss": 0.2623,
-     "rmse_bins": 0.1883,
-     "n": 28
+     "log_loss": 0.2647,
+     "rmse_bins": 0.1924,
+     "n": 29
     }
    }
   }
@@ -103,9 +103,9 @@
     "n": 19
    },
    {
-    "predicted": 0.643,
-    "actual": 0.75,
-    "n": 8
+    "predicted": 0.645,
+    "actual": 0.778,
+    "n": 9
    },
    {
     "predicted": 0.768,
@@ -130,9 +130,9 @@
     "n": 9
    },
    {
-    "predicted": 0.757,
-    "actual": 0.684,
-    "n": 19
+    "predicted": 0.755,
+    "actual": 0.7,
+    "n": 20
    },
    {
     "predicted": 0.851,
@@ -151,15 +151,15 @@
    "challenger": "lightgbm-public-v1",
    "kind": "lightgbm",
    "promote": false,
-   "n": 114,
+   "n": 115,
    "champion_log_loss": 0.4034,
-   "challenger_log_loss": 0.3748,
-   "champion_rmse_bins": 0.173,
-   "challenger_rmse_bins": 0.1012,
-   "p_better": 0.805,
+   "challenger_log_loss": 0.3745,
+   "champion_rmse_bins": 0.1751,
+   "challenger_rmse_bins": 0.0999,
+   "p_better": 0.811,
    "reasons": [
     "lightgbm models cannot schedule",
-    "114 shared reviews < 300",
+    "115 shared reviews < 300",
     "better log loss in 81% of resamples < 95%"
    ]
   }
