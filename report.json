@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-10",
+ "generated_at": "2026-11-13",
  "rules": {
   "min_gap_days": 1.0,
   "gate_min_reviews": 300,
